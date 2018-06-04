@@ -1,0 +1,46 @@
+<script>if(!window.jQuery){document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"><\/script>');}</script>
+<script>
+	$().ready(function(){
+		$('#show, #hide').click(function(){
+			if( this.id == 'show'){
+				$('.men').show();
+				$('.women').show();
+			}else{
+				$('.women').hide();
+				$('.men').hide();
+			}
+		});
+		$('#men, #women').click(function(){
+			if( this.id == 'men'){
+				$('.men').show();
+				$('.women').hide();
+			}else{
+				$('.women').show();
+				$('.men').hide();
+			}
+		});
+		$('#wednesday, #thursday, #friday, #saturday').click(function(){
+			if( this.id == 'wednesday' ){
+				$('.thursday').hide();
+				$('.friday').hide();
+				$('.saturday').hide();
+				$('.wednesday').show();
+			}else if ( this.id == 'thursday' ){
+				$('.wednesday').hide();
+				$('.friday').hide();
+				$('.saturday').hide();
+				$('.thursday').show();
+			}else if ( this.id == 'friday' ){
+				$('.wednesday').hide();
+				$('.thursday').hide();
+				$('.saturday').hide();
+				$('.friday').show();
+			}else{
+				$('.wednesday').hide();
+				$('.thursday').hide();
+				$('.friday').hide();
+				$('.saturday').show();
+			}
+		});
+	});
+</script>

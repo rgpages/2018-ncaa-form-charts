@@ -1,0 +1,68 @@
+<style>
+
+	button.filter {
+		color: #fff;
+		background-color: #ae1b1f;
+		font-family: "BentonSansCond Regular",Arial,sans-serif;
+		font-size: 12px;
+		text-transform: uppercase;
+		border: 0;
+	}
+	.button-group.bdf {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.bdf button.bdf-item {
+		padding: 10px;
+		margin: 10px;
+		flex: 1 1 140px;
+	}
+	@media all and (max-width: 640px){
+		.bdf button.bdf-item {
+			padding: 20px 10px;
+			flex: 1 1 190px;
+		}
+	}
+	@media all and (max-width: 440px){
+		.bdf button.bdf-item {
+			flex: 1 1 120px;
+		}
+	}
+	button.filter:hover {
+		background-color: #6b1013;
+	}
+
+	button.chart-reverse {
+		width: 100%;
+		color: #fff;
+		background-color: #444;
+		font-family: "BentonSansCond Regular",Arial,sans-serif;
+		font-size: 12px;
+		text-transform: uppercase;
+		margin: 10px 0;
+		padding: 5px 0;
+		border: 0;
+	}
+	button.chart-reverse:hover,
+	button.chart-reverse:active {
+		background-color: #222;
+	}
+	@media all and (max-width: 640px){
+		button.chart-reverse {
+			padding: 20px 0;
+		}
+	}
+
+	div.chart div.streamer h1 { 
+		text-align: center;
+	}
+	table { 
+		font-family: Arial, sans-serif;
+		font-size: 12px;
+		margin-bottom: 10px; 
+	}
+	thead { text-align: left; }
+	tr { border-bottom: 1px solid black; }
+	div#charts p.caption { font-size: 12px; }
+
+</style>

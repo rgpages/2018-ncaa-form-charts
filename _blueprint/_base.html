@@ -1,0 +1,211 @@
+<!doctype html>
+<!--[if IE 6]> <html class="no-js ie6 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js no-touch"> <!--<![endif]-->
+<head>
+	<title>RG form chart blueprint</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta http-equiv="cleartype" content="on">
+	
+	<meta name="verify-v1" content="FPxMUeDPHJaIRBh+RAEc0QZisGX9WHLZuqlbleiLe3c=">
+	<meta name="google-site-verification" content="-b9kSGtOMT3DZyn5y1faDWWBN74GtyBDZlCDJuf39Yc">
+	<meta name="msvalidate.01" content="608AEB9B4D0BDA128921F2615DCC1FCE">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<script src="http://static.registerguard.com/v5/bulldog/dist/1.0.0/20160317/1/js/preflight.min.js"></script>
+	
+	<!--[if (lt IE 9) & (!IEMobile 7)]>
+		<script src="http://static.registerguard.com/v5/bulldog/dist/1.0.0/20160317/1/js/html5shiv-printshiv.min.js"></script>
+		<link href="http://static.registerguard.com/respond-proxy.html" id="respond-proxy" rel="respond-proxy">
+		<link href="http://registerguard.com/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
+	<![endif]-->
+	
+	<link rel="stylesheet" href="http://static.registerguard.com/v5/bulldog/dist/1.0.0/20170530/1/css/bulldog.min.css">
+	
+	<link rel="stylesheet" href="http://static.registerguard.com/v5/indesign/styles.css">
+	
+	<!-- ************************************************* -->
+	<!-- ************          DFP          ************** -->
+	<!-- ************************************************* -->
+
+	<link rel="stylesheet" href="http://advertising.registerguard.com/assets/hosted/css/ads.css?v=20141020">
+
+	<!--// Begin Bidder //-->
+	<script type="text/javascript" src="//os4m-d.openx.net/w/1.0/jstag?nc=30582678-OS4_Bidder"></script>
+	<script type="text/javascript">
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+		(function() {
+		var gads = document.createElement("script");
+		gads.async = true;
+		gads.type = "text/javascript";
+		var useSSL = "https:" == document.location.protocol;
+		gads.src = (useSSL ? "https:" : "http:") + "//www.googletagservices.com/tag/js/gpt.js";
+		var node =document.getElementsByTagName("script")[0];
+		node.parentNode.insertBefore(gads, node);
+		})();
+	</script>
+	<!--// End Bidder //-->
+	
+	<script>
+		var googletag = googletag || {};
+		googletag.cmd = googletag.cmd || [];
+	</script>
+	
+	<script>
+		
+		googletag.cmd.push(function() {
+			
+			// Set up size mapping
+			var mapping = googletag.sizeMapping()
+				.addSize([0, 0], [320, 50]) // Default banner is mobile banner (320x50)
+				.addSize([1005, 100], [728, 90]) // On C breakpoint (>1005px) show desktop banner (728x90)
+				.build();
+			
+			// If desktop, serve weather widget
+			if (document.documentElement.clientWidth >= 1005){
+				googletag.defineSlot('/30582678/RGM/news/local', [120, 60], 'ros-weather-widget')
+					.setTargeting('pos', ['rgm_weather_widget'])
+					.addService(googletag.pubads());
+			}
+			
+			// Story page:
+			googletag.defineSlot('/30582678/RGM/news/local', [[320, 50], [728, 90]], 'leaderboard-top')
+				.setTargeting('pos', ['atf'])
+				.defineSizeMapping(mapping)
+				.addService(googletag.pubads());
+			googletag.defineSlot('/30582678/RGM/news/local', [[300, 600],[300, 250]], 'medium-rectangle-1')
+				.setTargeting('pos', ['atf','rgm_one'])
+				.addService(googletag.pubads());
+			googletag.defineSlot('/30582678/RGM/news/local', [[300, 600],[300, 250]], 'medium-rectangle-2')
+				.setTargeting('pos', ['atf','rgm_two'])
+				.addService(googletag.pubads());
+			googletag.defineSlot('/30582678/RGM/news/local', [[320, 50], [728, 90]], 'leaderboard-bottom')
+				.setTargeting('pos', ['btf'])
+				.defineSizeMapping(mapping)
+				.addService(googletag.pubads());
+			
+			// KVPs
+			googletag.pubads().setTargeting('rgm_subcat',['local_news', 'communities'])
+			
+			googletag.pubads().setTargeting('page-type','article');
+			googletag.pubads().setTargeting('rgm_article_id','35716878');
+			
+			// General stuff
+			googletag.pubads().enableSingleRequest();
+			googletag.pubads().collapseEmptyDivs();
+			googletag.enableServices();
+		});
+		
+	</script>
+	
+	<!-- ************************************************* -->
+	<!-- ************          /DFP         ************** -->
+	<!-- ************************************************* -->
+	
+	<!-- Extra CSS START -->
+	{% block extra_css %}{% endblock extra_css %}
+	<!-- Extra CSS END -->
+	
+</head>
+<body>
+	
+	<div class="wiffle">
+	
+		{% include '_nav.html' %}
+	
+		<div id="bd_banner-top" class="bd_banner">
+		
+			<!-- //////////////////// Leaderboard Top \\\\\\\\\\\\\\\\\\\\ -->
+			<div class="advert"><div id="leaderboard-top"><script>googletag.cmd.push(function() { googletag.display('leaderboard-top'); });</script></div></div>
+			<!-- \\\\\\\\\\\\\\\\\\\\ Leaderboard Top //////////////////// -->
+		
+		</div> <!-- /#bd_banner-top -->
+	
+		<div id="bd_content">
+		<!-- ##### BEGIN CONTENT AREA ##### -->
+		
+			<div class="w_row">
+			
+				<div class="w_col w_C130">&nbsp;</div>
+			
+				<div class="w_col w_C640 w_D980">
+				
+					<h1>{{ seo_head }}</h1>
+					{% if seo_deck %}<h2 class="sh4">{{ seo_deck }}</h2>{% endif %}
+				
+					<hr>
+				
+					<div class="fix">
+						
+						<div id="meta">
+							<div class="byline name byline1">{{ byline }}</div>
+							<div class="byline organization byline2">{{ byline_org }}</div>
+							<div class="pub"><time pubdate datetime="2017-06-05T00:00:00-07:00">{{ pubdate }}</time></div>
+						</div> <!-- /#meta -->
+					
+						<div class="sharing">
+							<div class="addthis_sharing_toolbox"></div>
+						</div>
+					
+					</div> <!-- /.fix -->
+				
+					<hr>
+				
+				
+					<!-- Content START -->
+					{% block content %}{% endblock content %}
+					<!-- Content END -->
+				
+				
+					</div><!-- /.w_col -->
+			
+				<div class="w_col w_C130">&nbsp;</div>
+			
+			</div><!-- /w.row -->
+		
+		<!-- ##### END CONTENT AREA ##### -->
+		</div> <!-- /#bd_content -->
+	
+		<!-- //////////////////// Leaderboard Bottom \\\\\\\\\\\\\\\\\\\\ -->
+		<div id="bd_banner-bottom" class="bd_banner">
+			<div class="advert">
+				<div id="leaderboard-bottom"><script>googletag.cmd.push(function() { googletag.display('leaderboard-bottom'); });</script></div>
+			</div>
+		</div>
+		<!-- \\\\\\\\\\\\\\\\\\\\ Leaderboard Bottom //////////////////// -->
+	
+		{% include '_footer.html' %}
+	
+	</div> <!-- /.wiffle -->
+
+	<script>if(!window.jQuery){document.write('<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"><\/script>');}</script>
+	<script>if(!window.jQuery){document.write('<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.10.2.min.js"><\/script>');}</script>
+
+	<script src="http://static.registerguard.com/v5/bulldog/dist/1.0.0/20170530/1/js/bulldog.min.js"></script>
+	
+	<!-- Extra JS START -->
+	{% block extra_js %}{% endblock %}
+	<!-- Extra JS END -->
+
+	<!-- Brightcove HTML5 JS -->
+	<script src="//players.brightcove.net/4350897271001/EJlsV6Ece_default/index.min.js"></script>
+	<script src="//players.brightcove.net/4350897271001/4yVIyrPcx_default/index.min.js"></script>
+
+
+	<!-- slider02.csp -->
+	<script src="//registerguard.com/csp/cms/sites/rg/assets/includes/slider02.csp"></script>
+
+	<!--[if (lt IE 9) & (!IEMobile 7)]>
+		<script src="http://static.registerguard.com/v5/bulldog/dist/1.0.0/20170530/1/js/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Civil comments -->
+
+	<script>if($('.civil-comment-count').length){document.write('<script src="https://d2ylgh2cnbot5i.cloudfront.net/v1/embed.js" async><\/script>');}</script>
+
+</body>
+</html>

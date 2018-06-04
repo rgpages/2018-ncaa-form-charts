@@ -1,0 +1,84 @@
+{% macro event(eslug) -%}
+	{% for s in g.current_site.data[eslug] %}
+		{% if s.id == "Analysis" %}
+			<p class="caption">Analysis: {% if s.name %}{{ s.name }}{% else %}{{ s.school }}{% endif %}</p>
+		{% elif s.id|safe == "1" %}
+			<table>
+				<thead>
+					<tr>
+						<th></th>
+						{% if s.name %}<th>Name</th>{% endif %}
+						<th>School</th>
+						{% if s.best %}<th>'17 Best</th>{% endif %}
+						{% if s.points %}<th>Points</th>{% endif %}
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>{{ s.id }}</td>
+						{% if s.name %}<td>{{ s.name }}</td>{% endif %}
+						<td>{{ s.school }}</td>
+						{% if s.best %}<td>{{ s.best }}</td>{% endif %}
+						{% if s.points %}<td>{{ s.points }}</td>{% endif %}
+					</tr>
+		{% elif s.id|safe == "8" %}
+					<tr>
+						<td>{{ s.id }}</td>
+						{% if s.name %}<td>{{ s.name }}</td>{% endif %}
+						<td>{{ s.school }}</td>
+						{% if s.best %}<td>{{ s.best }}</td>{% endif %}
+						{% if s.points %}<td>{{ s.points }}</td>{% endif %}
+					</tr>
+				</tbody>
+			</table>
+		{% else %}
+					<tr>
+						<td>{{ s.id }}</td>
+						{% if s.name %}<td>{{ s.name }}</td>{% endif %}
+						<td>{{ s.school }}</td>
+						{% if s.best %}<td>{{ s.best }}</td>{% endif %}
+						{% if s.points %}<td>{{ s.points }}</td>{% endif %}
+					</tr>
+		{% endif %}
+	{%- endfor %}
+{%- endmacro %}
+
+<div id="story">
+	
+	<p class="BodyText-BodyText">Below are the Register-Guard men's and women's form charts for the <a href="http://www.ncaa.com/championships/trackfield-outdoor/d1" target="_blank">2017 Outdoor NCAA Track and Field Championships</a>. The events are listed in chronological order starting with the projected team scores.</p>
+	<p class="BodyText-BodyText">To expand or collapse an event, simply click or tap on that event's gray label bar. Alternatively, you may open all or close all of the events using the red buttons at the top. You may also open or close all men's or women's events, or toggle the form charts for specific days.</p>
+	<p class="BodyText-BodyText">Be sure to bookmark this page or add it to your phone's home screen to save this page for later.</p>
+
+	<div class="button-group bdf bdf-Arow">
+		<button id="show" class="filter bdf-item">Open all events</button>
+		<button id="hide" class="filter bdf-item">Close all events</button>
+		<button id="men" class="filter bdf-item">All men's events</button>
+		<button id="women" class="filter bdf-item">All women's events</button>
+	</div><!-- /.button-group -->
+
+	<div class="button-group bdf bdf-Arow">
+		<button id="wednesday" class="filter bdf-item">Wednesday events</button>
+		<button id="thursday" class="filter bdf-item">Thursday events</button>
+		<button id="friday" class="filter bdf-item">Friday events</button>
+		<button id="saturday" class="filter bdf-item">Saturday events</button>
+	</div><!-- /.button-group -->
+
+	<div id="charts">
+	
+		{% for e in events %}
+		
+			<button onclick="$('#{{ e.slug }}').toggle();" id="{{ e.slug }}_button" class="chart-reverse">{{ e.event }}{% if (e.slug != "m_team") and (e.slug != "w_team") %} ({{ e.time }} {{ e.day }}){% endif %}</button>
+		
+			<div id="{{ e.slug }}" class="{{ e.tags }}" style="display: {{ e.display }};">
+				{{ event(e.slug) }}
+			</div><!-- /#{{ e.slug }} -->
+		
+		{% endfor %}
+	
+	</div><!-- /#charts -->
+	
+	<hr>
+	
+	<p class="BodyText-BodyText_Tagline">Page designed by <a href="mailto:rob.denton@registerguard.com">Rob Denton</a>. Follow him on Twitter <a href="http://twitter.com/robertrdenton">@robertrdenton</a>.</p>
+	
+</div><!-- /#story -->
