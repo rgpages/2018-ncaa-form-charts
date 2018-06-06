@@ -5,7 +5,7 @@ Tarbell project configuration
 """
 
 # Google spreadsheet key
-SPREADSHEET_KEY = "1FIl_mXfBWeFonUBK8OVK3HvQgS4SmsP406h90xpcS24"
+SPREADSHEET_KEY = "1ZVonzvHKEv_06tPlK-bQxXC0bpLMJhoYZL1RaZ0kY18"
 
 # Exclude these files from publication
 EXCLUDES = ["*.md", "requirements.txt"]
@@ -37,6 +37,6 @@ EXCLUDES = ["*.md", "requirements.txt"]
 
 # Default template variables
 DEFAULT_CONTEXT = {
-    'name': 'ncaa17',
-    'title': '2017 NCAA Track & Field Championship form charts'
+    'name': 'ncaa18',
+    'title': '2018 NCAA Track & Field Championship form charts'
 }

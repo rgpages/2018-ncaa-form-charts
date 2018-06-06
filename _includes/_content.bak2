@@ -45,10 +45,6 @@
 
 <div id="story">
 	
-	<p class="BodyText-BodyText">Below are the Register-Guard men's and women's form charts for the <a href="http://www.ncaa.com/championships/trackfield-outdoor/d1" target="_blank">2018 Outdoor NCAA Track and Field Championships</a>. The events are listed in chronological order starting with the projected team scores.</p>
-	<p class="BodyText-BodyText">To expand or collapse an event, simply click or tap on that event's gray label bar. Alternatively, you may open all or close all of the events using the red buttons at the top. You may also open or close all men's or women's events, or toggle the form charts for specific days.</p>
-	<p class="BodyText-BodyText">Be sure to bookmark this page or add it to your phone's home screen to save this page for later.</p>
-
 	<div class="button-group bdf bdf-Arow">
 		<button id="show" class="filter bdf-item">Open all events</button>
 		<button id="hide" class="filter bdf-item">Close all events</button>
@@ -78,7 +74,5 @@
 	</div><!-- /#charts -->
 	
 	<hr>
-	
-	<p class="BodyText-BodyText_Tagline">Page produced by <a href="mailto:rob.denton@registerguard.com">Rob Denton</a> and <a href="mailto:john.heasly@registerguard.com">John Heasly</a>.</p>
 	
 </div><!-- /#story -->
